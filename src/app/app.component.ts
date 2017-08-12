@@ -31,13 +31,13 @@ export class AppComponent implements OnInit {
 
   activateEvent(event) {
     if (ENV === 'development') {
-      console.log('Activate Event:', event);
+      // console.log('Activate Event:', event);
     }
   }
 
   deactivateEvent(event) {
     if (ENV === 'development') {
-      console.log('Deactivate Event', event);
+      // console.log('Deactivate Event', event);
     }
   }
 }

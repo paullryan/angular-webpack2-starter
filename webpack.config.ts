@@ -323,8 +323,16 @@ const serverConfig: WebpackConfig = {
   plugins: [
     getAotPlugin('server', AOT)
   ],
+  node: {
+    __dirname: true,
+    __filename: true
+  },
   module: {
     rules: [
+      {
+        test: /consolidate.js/,
+        use: 'null-loader'
+      },
       {
         test: /@angular(\\|\/)material/,
         loader: 'imports-loader',

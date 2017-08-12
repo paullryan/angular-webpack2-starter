@@ -39,7 +39,7 @@ export class DashboardComponent implements OnDestroy, OnInit {
   ngOnInit() {
     this.form.get('name').setValue(this.user.name);
     if (UNIVERSAL) {
-      this.testSub$ = this.http.get('http://localhost:8000/data').map(data => {
+      this.testSub$ = this.http.get('https://localhost:5553/data').map(data => {
         return `${data.greeting} ${data.name}`;
       });
     }
